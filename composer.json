@@ -1,0 +1,23 @@
+{
+    "name": "Cltvo/Chahuistle",
+    "description": "Create Wp themes toolbox",
+    "license": "MIT",
+    "keywords": ["cltvo","worpress"],
+    "authors": [
+        {
+            "name": "Eduardo González",
+            "email": "fectda@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.8"
+	},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cltvo\\Chahuistle\\": "src"
+        }
+    }
+}
