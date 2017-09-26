@@ -41,10 +41,11 @@ abstract class RegisterScriptsHook extends HooksManager {
 
     protected function registerScript(RegisterScriptContract $script)
     {
-
+        $cdn_url = $script->getCDNURL();
+        
         wp_register_script(
             $script->getHandle(),
-            $this->getJSPath().$script->getFilename(),
+            $cdn_url ? $cdn_url :$this->getJSPath().$script->getFilename(),
             $script->getDependencies(),
             $script->getVersion(),
             $script->inFooter()

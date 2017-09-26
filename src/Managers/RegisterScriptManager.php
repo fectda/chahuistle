@@ -8,6 +8,12 @@ use Cltvo\Chahuistle\Helpers\StringHelper;
 abstract class RegisterScriptManager implements RegisterScriptContract{
 
     /**
+     * cdn  of the script relative to the js theme path
+     * @var string
+     */
+    protected $cdn_url = "";
+
+    /**
      * path of the script relative to the js theme path
      * @var string
      */
@@ -38,6 +44,10 @@ abstract class RegisterScriptManager implements RegisterScriptContract{
      */
     protected $register_variables = [];
 
+    public function getCDNURL()
+    {
+        return $this->cdn_url;
+    }
 
     public function getFilename()
     {
