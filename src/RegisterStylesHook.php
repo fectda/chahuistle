@@ -27,7 +27,7 @@ abstract class RegisterStylesHook extends HooksManager {
     {
         wp_enqueue_style(
             $style->getHandle(),
-            $this->getCSSPath().$style->getFilename(),
+            $style->getSource($this->getCSSPath()),
             $style->getDependencies(),
             $style->getVersion(),
             $style->getMedia()

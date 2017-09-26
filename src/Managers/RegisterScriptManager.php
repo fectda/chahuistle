@@ -4,9 +4,11 @@ namespace Cltvo\Chahuistle\Managers;
 
 use Cltvo\Chahuistle\Contracts\RegisterScriptContract;
 use Cltvo\Chahuistle\Helpers\StringHelper;
+use Cltvo\Chahuistle\Managers\Traits\LoadFromCDNTrait;
 
 abstract class RegisterScriptManager implements RegisterScriptContract{
 
+    use LoadFromCDNTrait;
     /**
      * cdn  of the script relative to the js theme path
      * @var string
@@ -44,10 +46,7 @@ abstract class RegisterScriptManager implements RegisterScriptContract{
      */
     protected $register_variables = [];
 
-    public function getCDNURL()
-    {
-        return $this->cdn_url;
-    }
+
 
     public function getFilename()
     {

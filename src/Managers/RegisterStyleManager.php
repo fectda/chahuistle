@@ -4,8 +4,16 @@ namespace Cltvo\Chahuistle\Managers;
 
 use Cltvo\Chahuistle\Contracts\RegisterStyleContract;
 use Cltvo\Chahuistle\Helpers\StringHelper;
+use Cltvo\Chahuistle\Managers\Traits\LoadFromCDNTrait;
 
 abstract class RegisterStyleManager implements RegisterStyleContract{
+
+    use LoadFromCDNTrait;
+    /**
+     * cdn  of the script relative to the js theme path
+     * @var string
+     */
+    protected $cdn_url = "";
 
     /**
      * path of the script relative to the js theme path
